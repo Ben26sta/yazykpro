@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { LANGUAGES, LESSONS, LANG_LIST } from "./lessons.js";
+import PhotoLearn from "./PhotoLearn.jsx";
 
 function save(p) { try { localStorage.setItem("yzp_v2", JSON.stringify(p)); } catch(e) {} }
 function load() { try { const s=localStorage.getItem("yzp_v2"); return s?JSON.parse(s):null; } catch(e) { return null; } }
@@ -49,11 +50,11 @@ function AchievementPopup({ ach, onClose }) {
 function WelcomeScreen({ onClose, theme }) {
   const T=THEMES[theme]; const [step,setStep]=useState(0);
   const steps=[
-    { icon:"🌍", title:"ЯзыкПро", text:"Английский, немецкий и французский — от нуля до C1. Уроки для любого уровня!" },
-    { icon:"🎯", title:"Выбери свой уровень", text:"Новичок? Начни с A1. Уже знаешь язык? Прыгай сразу на B2 или C1 — уроки не заблокированы после базы." },
-    { icon:"✏️", title:"Разные форматы задач", text:"Выбор варианта, ввод ответа, перевод фраз. Учёба через практику — самый эффективный метод." },
-    { icon:"🤖", title:"ИИ-собеседник", text:"Практикуй живой разговор. ИИ исправляет ошибки, объясняет грамматику и отвечает на любые вопросы." },
-    { icon:"🏆", title:"Достижения и серия дней", text:"Зарабатывай награды, поддерживай серию и следи за прогрессом. Прогресс сохраняется автоматически!" },
+    { icon:"🌍", title:"ЯзыкПро — 3 языка", text:"Английский, немецкий и французский — от A1 до C1. Уроки для любого уровня. Просто выбери язык и начни!" },
+    { icon:"📚", title:"Уроки и задания", text:"Новичок? Начни с A1. Знаешь язык? Прыгай на B2 или C1. Разные форматы: выбор ответа, ввод, перевод." },
+    { icon:"📸", title:"Назови предмет (новинка!)", text:"Сфотографируй любой предмет — ИИ мгновенно покажет как он называется на выбранном языке с примером и лайфхаком!" },
+    { icon:"🤖", title:"ИИ-собеседник", text:"Практикуй живой разговор на любом языке. ИИ исправляет ошибки и объясняет грамматику — как настоящий репетитор." },
+    { icon:"🏆", title:"Прогресс и достижения", text:"Зарабатывай награды, поддерживай серию дней, следи за словарным запасом. Всё сохраняется автоматически!" },
   ];
   return (
     <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.93)", zIndex:1000, display:"flex", alignItems:"center", justifyContent:"center", padding:20 }}>
@@ -561,10 +562,11 @@ export default function App() {
     if(tab==="home") return <HomeScreen progress={progress} lang={lang} onNavigate={navigate} theme={theme}/>;
     if(tab==="stats") return <StatsScreen progress={progress} theme={theme}/>;
     if(tab==="dict") return <DictionaryScreen lang={lang} theme={theme}/>;
+    if(tab==="photo") return <PhotoLearn lang={lang} theme={theme}/>;
     return null;
   }
 
-  const tabs=[{id:"home",icon:"📚",label:"Уроки"},{id:"chat",icon:"🤖",label:"Практика"},{id:"dict",icon:"📖",label:"Словарь"},{id:"stats",icon:"📊",label:"Прогресс"}];
+  const tabs=[{id:"home",icon:"📚",label:"Уроки"},{id:"chat",icon:"🤖",label:"Практика"},{id:"photo",icon:"📸",label:"Фото"},{id:"dict",icon:"📖",label:"Словарь"},{id:"stats",icon:"📊",label:"Прогресс"}];
 
   return (
     <div style={{ minHeight:"100vh", background:T.bg, color:T.text, fontFamily:"'Georgia',serif", maxWidth:480, margin:"0 auto" }}>
