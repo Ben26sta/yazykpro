@@ -15,6 +15,28 @@ export default function PhotoLearn({ lang, theme }) {
   const [error, setError] = useState(null);
   const galleryRef = useRef(null);
 
+  // Открыть камеру через Telegram WebApp API
+  function openCamera() {
+    const tg = window.Telegram?.WebApp;
+    if (tg && tg.showScanQrPopup) {
+      // Попробуем через нативный метод Telegram
+    }
+    // Fallback — системный выбор с камерой
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "image/*";
+    input.capture = "camera";
+    input.onchange = (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        setImage(URL.createObjectURL(file));
+        setResult(null);
+        analyzePhoto(file);
+      }
+    };
+    input.click();
+  }
+
   async function analyzePhoto(file) {
     setLoading(true); setResult(null); setError(null);
     try {
@@ -76,9 +98,14 @@ export default function PhotoLearn({ lang, theme }) {
 
       <input ref={galleryRef} type="file" accept="image/*" onChange={handleFile} style={{ display:"none" }} />
 
-      <button onClick={() => galleryRef.current.click()} style={{ width:"100%", padding:16, background:`linear-gradient(135deg,${L.color},${L.color}cc)`, border:"none", borderRadius:14, color:"#fff", fontSize:15, cursor:"pointer", fontFamily:"inherit", fontWeight:"bold", marginBottom:14 }}>
-        📷 Выбрать фото или сделать снимок
-      </button>
+      <div style={{ display:"flex", gap:10, marginBottom:14 }}>
+        <button onClick={openCamera} style={{ flex:1, padding:15, background:`linear-gradient(135deg,${L.color},${L.color}cc)`, border:"none", borderRadius:14, color:"#fff", fontSize:14, cursor:"pointer", fontFamily:"inherit", fontWeight:"bold" }}>
+          📷 Камера
+        </button>
+        <button onClick={() => galleryRef.current.click()} style={{ flex:1, padding:15, background:"transparent", border:`2px solid ${L.color}`, borderRadius:14, color:L.color, fontSize:14, cursor:"pointer", fontFamily:"inherit", fontWeight:"bold" }}>
+          🖼️ Галерея
+        </button>
+      </div>
 
       {image && (
         <div style={{ marginBottom:14, borderRadius:16, overflow:"hidden", border:`2px solid ${T.border}`, position:"relative" }}>
