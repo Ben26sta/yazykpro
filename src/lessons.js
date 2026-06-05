@@ -371,6 +371,82 @@ export const LESSONS = {
         {type:"input",q:"Переведи: 'Тем не менее, мы должны продолжить.'",answer:"nevertheless we must continue",hint:"Nevertheless, we must continue."},
       ]
     },
+
+    {
+      id:"en_a1_7", title:"Дом и мебель", emoji:"🏠", level:"A1", group:"Дом",
+      description:"Комнаты, мебель, предметы быта",
+      theory:"Комнаты: Living room-гостиная, Bedroom-спальня, Kitchen-кухня, Bathroom-ванная, Garden-сад\n\nМебель: Table-стол, Chair-стул, Bed-кровать, Sofa-диван, Wardrobe-шкаф, Lamp-лампа, Mirror-зеркало\n\nПредметы: TV-телевизор, Fridge-холодильник, Washing machine-стиральная машина\n\nПредлоги: in-в, on-на, under-под, next to-рядом с, behind-за",
+      words:[
+        {word:"Kitchen",translation:"Кухня",example:"She cooks in the kitchen."},
+        {word:"Bedroom",translation:"Спальня",example:"My bedroom is cozy."},
+        {word:"Fridge",translation:"Холодильник",example:"Milk is in the fridge."},
+        {word:"Sofa",translation:"Диван",example:"Sit on the sofa!"},
+      ],
+      questions:[
+        {type:"choice",q:"'Kitchen' — это:",options:["Спальня","Кухня","Ванная","Гостиная"],answer:"Кухня"},
+        {type:"input",q:"Переведи: 'Кровать'",answer:"bed",hint:"bed"},
+        {type:"choice",q:"'The book is ON the table' — ON означает:",options:["Под","На","В","Рядом с"],answer:"На"},
+        {type:"input",q:"Как по-английски 'Холодильник'?",answer:"fridge",hint:"fridge"},
+        {type:"choice",q:"'Wardrobe' — это:",options:["Стол","Стул","Шкаф","Полка"],answer:"Шкаф"},
+        {type:"input",q:"Переведи: 'Ванная комната'",answer:"bathroom",hint:"bathroom"},
+        {type:"choice",q:"'Under' означает:",options:["На","В","Под","Рядом"],answer:"Под"},
+        {type:"input",q:"Как по-английски 'Диван'?",answer:"sofa",hint:"sofa"},
+        {type:"choice",q:"'Living room' — это:",options:["Гостиная","Спальня","Кухня","Прихожая"],answer:"Гостиная"},
+        {type:"input",q:"Предлог 'рядом с'?",answer:"next to",hint:"next to"},
+        {type:"choice",q:"'Mirror' — это:",options:["Лампа","Ковёр","Зеркало","Картина"],answer:"Зеркало"},
+        {type:"input",q:"Переведи: 'Стиральная машина'",answer:"washing machine",hint:"washing machine"},
+      ]
+    },
+    {
+      id:"en_a1_8", title:"Транспорт и город", emoji:"🚌", level:"A1", group:"Город",
+      description:"Транспорт, направления, ориентирование",
+      theory:"Транспорт: Car-машина, Bus-автобус, Train-поезд, Plane-самолёт, Metro-метро, Taxi-такси, Bicycle-велосипед\n\nГород: Street-улица, Shop-магазин, Hospital-больница, School-школа, Bank-банк, Park-парк, Restaurant-ресторан, Airport-аэропорт\n\nНаправления: Left-лево, Right-право, Straight ahead-прямо, Turn left/right-повернуть\nHow do I get to...? — Как добраться до...?",
+      words:[
+        {word:"Bus",translation:"Автобус",example:"Take the bus number 5."},
+        {word:"Train",translation:"Поезд",example:"The train is fast."},
+        {word:"Left",translation:"Налево",example:"Turn left at the corner."},
+        {word:"Airport",translation:"Аэропорт",example:"The airport is far."},
+      ],
+      questions:[
+        {type:"choice",q:"'Turn right' означает:",options:["Идти прямо","Повернуть налево","Повернуть направо","Назад"],answer:"Повернуть направо"},
+        {type:"input",q:"Как по-английски 'Аэропорт'?",answer:"airport",hint:"airport"},
+        {type:"choice",q:"'Straight ahead' означает:",options:["Налево","Направо","Прямо","Назад"],answer:"Прямо"},
+        {type:"input",q:"Переведи: 'Велосипед'",answer:"bicycle",hint:"bicycle"},
+        {type:"choice",q:"'Bank' — это:",options:["Магазин","Банк","Школа","Больница"],answer:"Банк"},
+        {type:"input",q:"Как по-английски 'Метро'?",answer:"metro",hint:"metro"},
+        {type:"choice",q:"'How do I get to the park?' означает:",options:["Где парк?","Как добраться до парка?","Сколько до парка?","Когда парк открыт?"],answer:"Как добраться до парка?"},
+        {type:"input",q:"Переведи: 'Такси'",answer:"taxi",hint:"taxi"},
+        {type:"choice",q:"'Hospital' — это:",options:["Гостиница","Больница","Школа","Магазин"],answer:"Больница"},
+        {type:"input",q:"Переведи: 'Улица'",answer:"street",hint:"street"},
+        {type:"choice",q:"'Bicycle' — это:",options:["Мотоцикл","Скутер","Велосипед","Самокат"],answer:"Велосипед"},
+        {type:"input",q:"Как спросить дорогу до вокзала?",answer:"how do i get to the station",hint:"How do I get to the station?"},
+      ]
+    },
+    {
+      id:"en_b1_5", title:"Фразовые глаголы", emoji:"💡", level:"B1", group:"Лексика",
+      description:"Phrasal verbs — самые важные",
+      theory:"Фразовые глаголы (глагол + предлог/наречие):\n• look up — искать (в словаре)\n• look after — заботиться\n• look forward to — ждать с нетерпением\n• give up — бросить, сдаться\n• give back — вернуть\n• take off — взлетать / снимать (одежду)\n• put on — надевать\n• put off — откладывать\n• get up — вставать\n• get on — ладить (с кем-то)\n• carry on — продолжать\n• run out of — закончиться\n• come across — наткнуться\n• find out — узнать, выяснить\n• turn down — отказаться / убавить",
+      words:[
+        {word:"give up",translation:"бросить, сдаться",example:"Don't give up!"},
+        {word:"look forward to",translation:"ждать с нетерпением",example:"I look forward to meeting you."},
+        {word:"run out of",translation:"закончиться",example:"We've run out of coffee."},
+        {word:"find out",translation:"узнать, выяснить",example:"I need to find out the truth."},
+      ],
+      questions:[
+        {type:"choice",q:"'Give up' означает:",options:["Дать обратно","Бросить/Сдаться","Дать вперёд","Подарить"],answer:"Бросить/Сдаться"},
+        {type:"input",q:"Переведи: 'Не сдавайся!'",answer:"don't give up",hint:"Don't give up!"},
+        {type:"choice",q:"'We've run out of milk' означает:",options:["Мы пролили молоко","У нас закончилось молоко","Мы купили молоко","Мы не любим молоко"],answer:"У нас закончилось молоко"},
+        {type:"input",q:"Как сказать 'Я с нетерпением жду встречи'?",answer:"i look forward to meeting you",hint:"I look forward to meeting you."},
+        {type:"choice",q:"'Look after' означает:",options:["Искать","Смотреть после","Заботиться","Смотреть назад"],answer:"Заботиться"},
+        {type:"input",q:"Переведи: 'Он отложил встречу.'",answer:"he put off the meeting",hint:"He put off the meeting."},
+        {type:"choice",q:"'Take off' в контексте самолёта:",options:["Приземлиться","Взлетать","Посадка","Рейс"],answer:"Взлетать"},
+        {type:"input",q:"Как сказать 'Выясни правду'?",answer:"find out the truth",hint:"Find out the truth"},
+        {type:"choice",q:"'Turn down the offer' означает:",options:["Принять предложение","Рассмотреть предложение","Отказаться от предложения","Улучшить предложение"],answer:"Отказаться от предложения"},
+        {type:"input",q:"Переведи: 'Продолжай!'",answer:"carry on",hint:"Carry on!"},
+        {type:"choice",q:"'Come across' означает:",options:["Перейти дорогу","Наткнуться/Случайно найти","Прийти к соглашению","Пройти мимо"],answer:"Наткнуться/Случайно найти"},
+        {type:"input",q:"Переведи: 'Они хорошо ладят.'",answer:"they get on well",hint:"They get on well."},
+      ]
+    },
   ],
 
   de: [
@@ -532,6 +608,57 @@ export const LESSONS = {
         {type:"input",q:"Переведи: 'На твоём месте я бы извинился.'",answer:"an deiner stelle würde ich mich entschuldigen",hint:"An deiner Stelle würde ich mich entschuldigen."},
         {type:"choice",q:"'An deiner Stelle würde ich...' используется для:",options:["Вежливых вопросов","Советов","Нереальных условий","Жалоб"],answer:"Советов"},
         {type:"input",q:"Konjunktiv II от 'sein'?",answer:"wäre",hint:"wäre"},
+      ]
+    },
+
+    {
+      id:"de_a2_3", title:"Еда и ресторан", emoji:"🍽️", level:"A2", group:"Повседневная жизнь",
+      description:"Заказ еды, ресторан, немецкая кухня",
+      theory:"• Die Speisekarte — Меню\n• Ich möchte bestellen — Я хотел бы заказать\n• Was empfehlen Sie? — Что вы рекомендуете?\n• Für mich bitte... — Для меня, пожалуйста...\n• Die Rechnung, bitte — Счёт, пожалуйста\n• Das schmeckt gut! — Это вкусно!\n• Vorspeise-закуска, Hauptgericht-основное, Nachspeise-десерт\n• Getränke — Напитки\n• Vegetarisch — Вегетарианский\n• Zahlen, bitte! — Рассчитайте, пожалуйста!",
+      words:[
+        {word:"die Speisekarte",translation:"Меню",example:"Darf ich die Speisekarte haben?"},
+        {word:"das Hauptgericht",translation:"Основное блюдо",example:"Das Hauptgericht ist lecker."},
+        {word:"die Rechnung",translation:"Счёт",example:"Die Rechnung, bitte!"},
+        {word:"vegetarisch",translation:"Вегетарианский",example:"Haben Sie vegetarische Gerichte?"},
+      ],
+      questions:[
+        {type:"choice",q:"'Speisekarte' — это:",options:["Официант","Меню","Счёт","Кухня"],answer:"Меню"},
+        {type:"input",q:"Как попросить счёт?",answer:"die rechnung bitte",hint:"Die Rechnung, bitte!"},
+        {type:"choice",q:"'Was empfehlen Sie?' означает:",options:["Что вы заказали?","Что вы рекомендуете?","Что у вас есть?","Сколько стоит?"],answer:"Что вы рекомендуете?"},
+        {type:"input",q:"Переведи: 'Основное блюдо'",answer:"hauptgericht",hint:"Hauptgericht"},
+        {type:"choice",q:"'Das schmeckt gut!' означает:",options:["Это дорого!","Это вкусно!","Это холодно!","Это много!"],answer:"Это вкусно!"},
+        {type:"input",q:"Как сказать 'Я хотел бы заказать'?",answer:"ich möchte bestellen",hint:"Ich möchte bestellen"},
+        {type:"choice",q:"'Nachspeise' — это:",options:["Закуска","Суп","Основное блюдо","Десерт"],answer:"Десерт"},
+        {type:"input",q:"Переведи: 'Напитки'",answer:"getränke",hint:"Getränke"},
+        {type:"choice",q:"'Vegetarisch' означает:",options:["Очень вкусный","Вегетарианский","Острый","Свежий"],answer:"Вегетарианский"},
+        {type:"input",q:"Как спросить 'Что вы рекомендуете?'",answer:"was empfehlen sie",hint:"Was empfehlen Sie?"},
+        {type:"choice",q:"'Vorspeise' — это:",options:["Основное блюдо","Десерт","Закуска","Суп"],answer:"Закуска"},
+        {type:"input",q:"Переведи: 'Есть ли у вас вегетарианские блюда?'",answer:"haben sie vegetarische gerichte",hint:"Haben Sie vegetarische Gerichte?"},
+      ]
+    },
+    {
+      id:"de_b1_3", title:"Разделяемые приставки", emoji:"🔀", level:"B1", group:"Грамматика",
+      description:"Trennbare Verben — глаголы с отделяемыми приставками",
+      theory:"Отделяемые приставки уходят В КОНЕЦ предложения!\nПриставки: ab-, an-, auf-, aus-, bei-, ein-, mit-, nach-, vor-, zu-, zurück-\n\nПримеры:\n• aufmachen (открывать): Ich mache die Tür auf.\n• anrufen (звонить): Er ruft mich an.\n• einkaufen (делать покупки): Wir kaufen ein.\n• aufstehen (вставать): Ich stehe um 7 Uhr auf.\n• mitnehmen (брать с собой): Nimmst du mich mit?\n• zurückkommen (возвращаться): Wann kommst du zurück?\n\nВ Infinitiv: aufmachen, anrufen\nВ Perfekt: aufgemacht (ge- между приставкой и основой)\nIch habe die Tür aufgemacht.",
+      words:[
+        {word:"aufmachen",translation:"открывать",example:"Mach bitte die Tür auf!"},
+        {word:"anrufen",translation:"звонить",example:"Ich rufe dich an."},
+        {word:"einkaufen",translation:"делать покупки",example:"Wir kaufen heute ein."},
+        {word:"aufstehen",translation:"вставать",example:"Ich stehe um 7 auf."},
+      ],
+      questions:[
+        {type:"choice",q:"'Ich mache die Tür ___.' (aufmachen)",options:["auf","ab","an","aus"],answer:"auf"},
+        {type:"input",q:"Переведи: 'Он звонит мне.' (anrufen)",answer:"er ruft mich an",hint:"Er ruft mich an."},
+        {type:"choice",q:"'Wir kaufen heute ___.' (einkaufen)",options:["ein","aus","an","auf"],answer:"ein"},
+        {type:"input",q:"Переведи: 'Я встаю в 7 часов.' (aufstehen)",answer:"ich stehe um 7 uhr auf",hint:"Ich stehe um 7 Uhr auf."},
+        {type:"choice",q:"Partizip II от 'anrufen':",options:["angerufen","gerufen","angeruft","rufen"],answer:"angerufen"},
+        {type:"input",q:"Переведи: 'Возьми меня с собой!' (mitnehmen)",answer:"nimm mich mit",hint:"Nimm mich mit!"},
+        {type:"choice",q:"'Zurückkommen' в предложении: 'Wann kommst du ___?'",options:["zurück","zurückkommen","komm zurück","zurückkomme"],answer:"zurück"},
+        {type:"input",q:"Partizip II от 'aufmachen':",answer:"aufgemacht",hint:"aufgemacht"},
+        {type:"choice",q:"Ge- в Partizip II отделяемых глаголов стоит:",options:["Перед приставкой","Между приставкой и основой","После основы","Не используется"],answer:"Между приставкой и основой"},
+        {type:"input",q:"Переведи: 'Она открыла дверь.' (aufmachen, Perfekt)",answer:"sie hat die tür aufgemacht",hint:"Sie hat die Tür aufgemacht."},
+        {type:"choice",q:"'Ich rufe dich an' — приставка 'an' стоит:",options:["В начале","В конце","Перед глаголом","После подлежащего"],answer:"В конце"},
+        {type:"input",q:"Переведи: 'Ты звонил мне вчера?' (anrufen, Perfekt)",answer:"hast du mich gestern angerufen",hint:"Hast du mich gestern angerufen?"},
       ]
     },
   ],
