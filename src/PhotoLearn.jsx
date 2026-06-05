@@ -15,28 +15,6 @@ export default function PhotoLearn({ lang, theme }) {
   const [error, setError] = useState(null);
   const galleryRef = useRef(null);
 
-  // Открыть камеру через Telegram WebApp API
-  function openCamera() {
-    const tg = window.Telegram?.WebApp;
-    if (tg && tg.showScanQrPopup) {
-      // Попробуем через нативный метод Telegram
-    }
-    // Fallback — системный выбор с камерой
-    const input = document.createElement("input");
-    input.type = "file";
-    input.accept = "image/*";
-    input.capture = "camera";
-    input.onchange = (e) => {
-      const file = e.target.files[0];
-      if (file) {
-        setImage(URL.createObjectURL(file));
-        setResult(null);
-        analyzePhoto(file);
-      }
-    };
-    input.click();
-  }
-
   async function analyzePhoto(file) {
     setLoading(true); setResult(null); setError(null);
     try {
@@ -98,13 +76,11 @@ export default function PhotoLearn({ lang, theme }) {
 
       <input ref={galleryRef} type="file" accept="image/*" onChange={handleFile} style={{ display:"none" }} />
 
-      <div style={{ display:"flex", gap:10, marginBottom:14 }}>
-        <button onClick={openCamera} style={{ flex:1, padding:15, background:`linear-gradient(135deg,${L.color},${L.color}cc)`, border:"none", borderRadius:14, color:"#fff", fontSize:14, cursor:"pointer", fontFamily:"inherit", fontWeight:"bold" }}>
-          📷 Камера
-        </button>
-        <button onClick={() => galleryRef.current.click()} style={{ flex:1, padding:15, background:"transparent", border:`2px solid ${L.color}`, borderRadius:14, color:L.color, fontSize:14, cursor:"pointer", fontFamily:"inherit", fontWeight:"bold" }}>
-          🖼️ Галерея
-        </button>
+      <button onClick={() => galleryRef.current.click()} style={{ width:"100%", padding:16, background:`linear-gradient(135deg,${L.color},${L.color}cc)`, border:"none", borderRadius:14, color:"#fff", fontSize:15, cursor:"pointer", fontFamily:"inherit", fontWeight:"bold", marginBottom:14 }}>
+        📷 Выбрать фото
+      </button>
+      <div style={{ background:`${L.color}10`, border:`1px solid ${L.color}30`, borderRadius:12, padding:"10px 14px", marginBottom:14, fontSize:12, color:T.subtext, lineHeight:1.6 }}>
+        💡 Совет: чтобы сфотографировать предмет — сначала сделай фото через камеру телефона, потом выбери его здесь
       </div>
 
       {image && (
