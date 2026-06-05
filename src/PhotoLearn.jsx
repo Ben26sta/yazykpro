@@ -13,7 +13,8 @@ export default function PhotoLearn({ lang, theme }) {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const fileRef = useRef(null);
+  const cameraRef = useRef(null);
+  const galleryRef = useRef(null);
 
   async function analyzePhoto(file) {
     setLoading(true); setResult(null); setError(null);
@@ -148,7 +149,7 @@ export default function PhotoLearn({ lang, theme }) {
           )}
 
           {/* Кнопка снова */}
-          <button onClick={() => { setImage(null); setResult(null); fileRef.current.click(); }}
+          <button onClick={() => { setImage(null); setResult(null); cameraRef.current.click(); }}
             style={{ padding: 13, background: "transparent", border: `1px solid ${T.border}`, borderRadius: 12, color: T.subtext, cursor: "pointer", fontFamily: "inherit", fontSize: 14 }}>
             📸 Сфотографировать ещё
           </button>
